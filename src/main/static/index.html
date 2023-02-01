@@ -21,6 +21,46 @@
                 <option value="A Man Called Otto">A Man Called Otto</option>
             </select>
         </div>
-        
+        <div>
+            <label for="antall">Antall </label>
+            <input name="antall" type="text" id="antall"/>
+        </div>
+        <div>
+            <div>
+            <label for="fornavn"> Fornavn </label>
+            <input name="fornavn" type="text" id="fornavn"/>
+            </div>
+            <div>
+            <label for="etternavn"> Etternavn </label>
+            <input name="etternavn" type="text" id="etternavn"/>
+        </div>
+            <div>
+            <label for="telefonnr"> Telefonnr </label>
+            <input name="telefonnr" type="text" id="telefonnr"/>
+        </div>
+            <div>
+            <label for="epost"> Epost </label>
+            <input name="epost" type="text" id="epost"/>
+        </div>
+            <div>
+            <button onclick="addBillett()">Kjøp Billett</button>
+        </div>
+        </div>
+        <div>
+        <h2>Alle Billetter</h2>
+        </div>
+        <table id="table">
+            <tr>
+                <th>Film</th>
+                <th>Antall</th>
+                <th>Fornavn</th>
+                <th>Etternavn</th>
+                <th>TelefonNr</th>
+                <th>Epost</th>
+            </tr>
+        </table>
+        <button onclick="slettBillett()">Slett billetter</button>
+    <script src="./index.js"></script>
+
     </body>
 </html>

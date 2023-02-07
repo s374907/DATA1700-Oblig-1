@@ -1,8 +1,8 @@
 let billetter = []
 let table = document.getElementById("table")
 let liste = ["film", "antall", "fornavn","etternavn","telefonnr","epost"]
-let values = []
  function addBillett(){
+    let values = []
     let error = false
     liste.forEach(function (name){
       values.push(document.getElementById(name).value)
@@ -11,12 +11,11 @@ let values = []
     for (var i = 0; i < errors.length; i++) {
       errors[i].innerHTML = " ";
     }
-    console.log(document.getElementById("error.epost").innerHTML)
+    
     for(let [index, val] of values.entries()){
-      if(!val){
+      if(!val && index <= 5){
       let pog = "error."+liste[index]
-      console.log(document.getElementById(pog))
-      document.getElementById(pog).innerHTML = "You need to write";
+      document.getElementById(pog).innerHTML = "Må skrive noe inn i " + liste[index];
       error = true
       }
     }
@@ -31,7 +30,6 @@ let values = []
       let cell = row.insertCell(-1)
       cell.innerHTML = billetter[billetter.length - 1][thing]
     }
-
   }
     
 function slettBillett(){
